@@ -17,7 +17,8 @@ namespace SalesmanTravel.App
             foreach (var address in addressBook)
             {
                 string[] wordOrNumbers = address.Split(" ");
-                if (address.Contains(zipcode))
+                string zipcodeInString = wordOrNumbers[wordOrNumbers.Length - 2] + " " + wordOrNumbers[wordOrNumbers.Length -1];
+                if (zipcode.Equals(zipcodeInString))
                 {
                     zipcodeFound = true;
                     for (int i = 1; i < wordOrNumbers.Length - 2; i++)

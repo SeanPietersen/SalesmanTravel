@@ -91,10 +91,10 @@ namespace SalesmanTravel.Test
             IRoutePlanner routePlanner = new RoutePlanner();
 
             //Act
-            var test5 = routePlanner.Travel(ad, "Sean 56215");
+            var test5 = routePlanner.Travel(ad, "NY 5643");
 
             //Assert
-            testCheck(test5, "Sean 56215:/");
+            testCheck(test5, "NY 5643:/");
         }
 
         private void testCheck(string actual, string expected)
