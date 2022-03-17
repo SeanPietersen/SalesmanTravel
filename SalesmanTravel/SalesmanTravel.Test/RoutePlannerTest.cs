@@ -18,9 +18,6 @@ namespace SalesmanTravel.Test
         + "2222 Tokyo Av. Tedmondville SW 43198,670 Paris St. Abbeville AA 45522,114 Surta Avenue Goodville GG 30655,"
         + "2 Holy Grail Street Niagara Town ZP 32908,3 Main Rd. Bern AE 56210,77 Gordon St. Atlanta RE 13000";
 
-        string code = "OH 43071,NY 56432,ZP 32908,AE 56210,RE 13000,EX 34342,SW 43098,AA 45521,GG 30654,ZP 32908,AE 56215,RE 13200,EX 34345,"
-       + "RE 13222,RE 13001,SW 43198,AA 45522,GG 30655,XX 32321,YY 45098";
-
 
         [Fact]
         public void TravelTest1()
@@ -85,6 +82,19 @@ namespace SalesmanTravel.Test
 
             //Assert
             testCheck(test5, "AE 56215:Main Al. Bern/320");
+        }
+
+        [Fact]
+        public void TravelTest6()
+        {
+            //Arrange
+            IRoutePlanner routePlanner = new RoutePlanner();
+
+            //Act
+            var test5 = routePlanner.Travel(ad, "Sean 56215");
+
+            //Assert
+            testCheck(test5, "Sean 56215:/");
         }
 
         private void testCheck(string actual, string expected)
