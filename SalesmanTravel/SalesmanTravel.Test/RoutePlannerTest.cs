@@ -1,3 +1,4 @@
+using SalesmanTravel.App;
 using Xunit;
 
 namespace SalesmanTravel.Test
